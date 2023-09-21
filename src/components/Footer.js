@@ -6,7 +6,7 @@ const Footer = () => {
   const iconSize = "2x";
 
   return (
-    <footer className="text-white py-4">
+    <footer className="text-dark py-4">
       <div className="container text-center">
         <p>&copy; {new Date().getFullYear()} Cristina Alzuri</p>
         <div className="footer-icons-container">
@@ -16,7 +16,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="footer-icon"
           >
-            <FontAwesomeIcon icon={faGithub} size={iconSize} />
+            <FontAwesomeIcon className="text-dark" icon={faGithub} size={iconSize} />
           </a>
           <a
             href="https://www.linkedin.com/in/cristina-alzuri-shrm-cp/"
@@ -24,7 +24,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="footer-icon"
           >
-            <FontAwesomeIcon icon={faLinkedin} size={iconSize} />
+            <FontAwesomeIcon className="text-dark" icon={faLinkedin} size={iconSize} />
           </a>
         </div>
       </div>

@@ -6,7 +6,7 @@ const Header = ({ setCurrentPage, currentPage }) => {
     <header className="text-white py-3">
       <div className="container">
         <nav className="navbar navbar-expand-md">
-          <a className="navbar-brand">Cristina Alzuri</a>
+          <a className="navbar-brand fw-bold">Cristina Alzuri</a>
           <button
             className="navbar-toggler"
             type="button"
