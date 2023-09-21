@@ -13,7 +13,7 @@ const Contact = () => {
             <div className="card p-3">
               <div className="card-body">
                 <h4>Contact Form</h4>
-                <form action="https://formspree.io/f/xdorzbbo" method="POST">
+                <form action="https://formspree.io/f/xeqbrzdd" method="POST">
                   <div className="form-group">
                     <label htmlFor="name">Name</label>
                     <input type="text" className="form-control" id="name" name="name" required />

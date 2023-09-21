@@ -1,44 +1,29 @@
 import React from 'react';
-import Project from './Project';
 
-const projects = [
-    {
-      title: 'MyHealthSpace',
-      description: 'Full-Stack web application using MERN, GraphQL, and API.',
-      imageSrc: 'myhealthspace.jpg',
-      deployedLink: 'https://my-health-space-e9d209a11adb.herokuapp.com/',
-      githubLink: 'https://github.com/andreaber23/myhealthspace.git'
-    },
-    {
-      title: 'MyWorkoutPal',
-      description: 'Full-Stack fitness tracker application.',
-      imageSrc: 'myworkoutpal.jpg',
-      deployedLink: 'https://myworkoutpal-fb26ea75640f.herokuapp.com/',
-      githubLink: 'https://github.com/calzu0821/my-workout-pal.git'
-    },
-  ];
-  
-  const Portfolio = () => {
-    return (
-      <section id="portfolio" className="py-5 text-center d-flex justify-content-center align-items-center">
-        <div className="container">
-          <h2 className="text-center">Portfolio</h2>
-          <div className="row">
-            {projects.map((project, index) => (
-              <Project
-                key={index}
-                title={project.title}
-                description={project.description}
-                imageSrc={project.imageSrc}
-                deployedLink={project.deployedLink}
-                githubLink={project.githubLink}
-              />
-            ))}
-          </div>
+const Project = ({ title, description, imageSrc, deployedLink, githubLink }) => {
+  return (
+    <div className="col-lg-4 col-md-6 mb-4">
+      <div className="card h-100">
+      <img
+          className="card-img-top"
+          src={"./" + imageSrc}
+          alt={title}
+          style={{
+            height: '134px',       
+            objectFit: 'cover',
+          }}
+        />
+        <div className="card-body">
+          <h4 className="card-title">{title}</h4>
+          <p className="card-text">{description}</p>
         </div>
-      </section>
-    );
-  };
-  
-  export default Portfolio;
-  
+        <div className="card-footer">
+          <a href={deployedLink} className="btn btn-primary" target="_blank" rel="noopener noreferrer">View App</a>
+          <a href={githubLink} className="btn btn-secondary ml-2" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Project;
